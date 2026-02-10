@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0f172a; /* dark industrial */
+  line-height: 1.6;
+}
+/* LANGUAGE POPUP */
+.lang-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.lang-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
+}
+
+.lang-box h2 {
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+.lang-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.lang-box button:first-child {
+  background: #16a34a;
+  color: white;
+}
+
+.lang-box button:last-child {
+  background: #2563eb;
+  color: white;
+}
+/* start */
+.home-about,
+.home-machines,
+.home-location {
+  padding: 4rem 1rem;
+}
+
+.navbar {
+  background: #ffffff;
+  border-bottom: 4px solid #f97316; /* orange accent */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/* DESKTOP ONLY */
+@media (min-width: 769px) {
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+
+    display: none;              /* 🔥 MOST IMPORTANT */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    z-index: 999;
+    list-style: none;
+  }
+
+  .nav-links.active {
+    display: flex;              /* 🔥 button click par open */
+  }
+}
+.nav-links a {
+  font-weight: 600;
+  font-size: 25px;
+  color: black;
+  position: relative;
+  text-decoration: none;
+  /* list-style: none; */
+
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: #f97316;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+} 
+/* Our Products */
+/* PAGE HEADER */
+.page-header {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #f1f5f9;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+}
+
+.page-header p {
+  margin-top: 0.5rem;
+  color: #475569;
+}
+
+/* MACHINES GRID */
+.machines {
+  padding: 4rem 1rem;
+}
+
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* MACHINE CARD */
+.machine-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.machine-card:hover {
+  transform: translateY(-8px);
+}
+
+.machine-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.machine-card h3 {
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.machine-card p {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* CTA */
+
+/* ABOUT COMPANY */
+.about-company {
+  padding: 4rem 1rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: #475569;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* WHY US */
+.why-us {
+  background: #f1f5f9;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.why-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* VISION & MISSION */
+.vision-mission {
+  padding: 4rem 1rem;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.vm-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-left: 5px solid #f97316;
+  border-radius: 8px;
+}
+
+.vm-box h3 {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.vm-box p {
+  color: #475569;
+}
+
+/* ABOUT CTA */
+.about-cta {
+  background: #020617;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.about-cta p {
+  color: #cbd5f5;
+  margin-bottom: 1.5rem;
+}
+/* CONTACT PAGE */
+.contact-page {
+  padding: 4rem 1rem;
+  
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* CONTACT INFO */
+.contact-page{
+    width: 100%;
+    align-items: center;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+  
+  
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  color: #475569;
+}
+
+.contact-info a {
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+/* LOCATION BOX */
+.location-box {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.location-box h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.map-link:hover {
+  background: #1d4ed8;
+}
+
+.map-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+/* MAP BOX */
+.map-box {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.map-box h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* CLICKABLE MAP */
+.map-click {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.map-click iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  pointer-events: none; /* 🔥 VERY IMPORTANT */
+}
+
+
+/* GLOBAL CALL BUTTON */
+.call-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16a34a;   /* green = call / trust */
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+
+  /* animation */
+  animation: shake 1.5s infinite;
+}
+
+/* HOVER */
+.call-btn:hover {
+  background: #15803d;
+}
+
+/* SHAKE ANIMATION */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+  .call-btn {
+    font-size: 16px;
+    padding: 12px 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+/* FOOTER */
+.footer {
+  background: #020617; /* dark industrial */
+  color: #e5e7eb;
+  padding-top: 3rem;
+  padding: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-box h3,
+.footer-box h4 {
+  color: #f97316; /* orange accent */
+  margin-bottom: 0.8rem;
+}
+
+.footer-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-box ul li a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer-box ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-box a {
+  color: #22c55e; /* green for call */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+/* footer mobile view */
+@media (max-width: 768px) {
+    .footer-grid {
+        text-align: center;
+}
+
+}

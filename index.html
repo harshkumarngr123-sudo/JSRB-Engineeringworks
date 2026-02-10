@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- LANGUAGE POPUP -->
+<div id="language-popup" class="lang-popup">
+  <div class="lang-box">
+    <h2>भाषा चुनें / Choose Language</h2>
+
+    <button onclick="setLanguage('hi')">हिंदी</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+</div>
+    
+<!-- navvar -->
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">
+      <img src="JSRB Logo.png" alt="JSRB Engineering Works">
+    </div>
+        <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" data-en="Home" data-hi="होम">होम</a></li>
+    <li><a href="Our Machines.html" data-en="Our Machines" data-hi="हमारी मशीनें">हमारी मशीनें</a></li>
+    <li><a href="About us.html" data-en="About Us" data-hi="हमारे बारे में">हमारे बारे में</a></li>
+    <li><a href="Contact us.html" data-en="Contact Us" data-hi="संपर्क करें">संपर्क करें</a></li>
+
+    </ul>
+  </div>
+</nav>
+<section class="home-about">
+  <div class="container about-grid">
+
+    <div class="about-text">
+      <h1 data-en="JSRB Engineering Works"
+    data-hi="जे.एस.आरबी. इंजीनियरिंग वर्क्स">जे.एस.आरबी इंजीनियरिंग वर्क्स</h1>
+
+     <p style="font-size: 20px;" "We manufacture agricultural machines like threshers and cutters."
+        data-hi="हम थ्रेशर और कटर जैसी कृषि मशीनों का निर्माण करते हैं।">
+        हम थ्रेशर और कटर जैसी कृषि मशीनों का निर्माण करते हैं।
+    </p>
+
+      <a href="About us.html" class="btn secondary" style="text-decoration:none; color:#15803d; 
+         font-weight: 500; font-size: 20px;" data-en="Know More" data-hi="अधिक जानें">अधिक जानें
+
+      </a>
+    </div>
+
+    <div class="about-image">
+      <img src="image1.jpeg" alt="JSRB Engineering Works">
+    </div>
+
+  </div>
+</section>
+<!-- our machines -->
+<section class="home-machines">
+  <div class="container">
+    <h2 data-en="Our Machines" data-hi="हमारी मशीनें">हमारी मशीनें</h2>
+
+    <div class="machines-grid">
+
+      <div class="machine-card">
+        <img src="image1.jpeg" alt="Thresher Machine">
+        <h3 data-en="Thresher Machine" data-hi="थ्रेशर मशीन">थ्रेशर मशीन</h3>
+      </div>
+
+      <div class="machine-card">
+        <img src="image1.jpeg" alt="Cutter Machine">
+        <h3 data-en="Thresher Machine" data-hi="थ्रेशर मशीन">थ्रेशर मशीन</h3>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:2rem;">
+      
+         <a href="Our Machines.html" class="btn primary"data-en="View All Machines"data-hi="सभी मशीनें देखें">
+        सभी मशीनें देखें
+        </a>
+
+    </div>
+  </div>
+</section>
+<!-- contact us -->
+<section class="home-location">
+  <div class="container location-grid">
+
+    <div class="location-text">
+      <h2 data-en="Our Location" data-hi="हमारी लोकेशन"> हमारी लोकेशन </h2>
+     <p data-en="Click on the map to open Google Maps"
+        data-hi="गूगल मैप खोलने के लिए नीचे दिए गए मैप पर क्लिक करें">
+        गूगल मैप खोलने के लिए नीचे दिए गए मैप पर क्लिक करें
+    </p>
+    </div>
+
+    <div class="map-box">
+      <a 
+        href="https://www.google.com/maps/search/?api=1&query=JSRB+Engineering+Works+brijnagar"
+        target="_blank"
+        class="map-click"
+      >
+        <iframe
+          src="https://www.google.com/maps?q=JSRB+Engineering+Works+brijnagar&output=embed"
+          loading="lazy">
+        </iframe>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- CALL BUTTON -->
+      <a href="tel:+919782529898" class="call-btn">
+        📞 Call Now
+       </a>
+       <footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- COMPANY INFO -->
+    <div class="footer-box">
+      <h3>JSRB Engineering Works</h3>
+      <p>
+        Manufacturer of agricultural machines like threshers and cutters,
+        built for durability and performance.
+      </p>
+    </div>
+
+    <!-- Footer-->
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-machines.html">Our Machines</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="footer-box">
+      <h4>Contact</h4>
+      <p>📍 Rajasthan, India</p>
+      <p>
+        📞 <a href="tel:+919782529898">+91 97825 29898</a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM LINE -->
+  <div class="footer-bottom">
+    © 2026 JSRB Engineering Works. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
